@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Mi Pantalla</title>
+  </head>
+  <body>
+      <nav class="navbar">
+        <div class="navbar-logo"><a href="./principal.html"><img src="../img/logotitulo.png" height="50px" width="120%"></a></div>
+          <ul class="navbar-options">
+            <li><a href="./formulario.html">Reportes</a></li>
+            <li><a href="#">Graficas</a></li>
+            <li><a href="./operativa.html">Opcion</a></li>
+            <li><a href="../index.html"><img src="../img/user.png" style="width: 50%;"></a></li>
+          </ul>
+      </nav>
+      <br>
+      <div id="formulario">
+        <div>
+          <div style="float: left;">
+            <label for="folio">Folio:</label>
+            <label>#123456</label>
+          </div>
+          <div style="float: right;">
+            <p>Fecha: <b><span id="fechaActual"></span></b></p>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div>
+          <label for="opciones">Tipo:</label>
+          <select id="opciones" name="opciones">
+            <option value="opcion1">Issue</option>
+            <option value="opcion2">Request</option>
+          </select>
+        </div>
+        <div>
+          <label for="tipo">Tipo:</label>
+          <input type="text" id="tipo" name="tipo">
+        </div>
+        <div>
+          <label for="descripcion">Descripción:</label>
+          <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+        </div>
+        <div class="option-group">
+          <div>
+            <label for="opcion1">Sistema:</label>
+            <select id="opcion1" name="opcion1">
+              <option value="opcion1">primera</option>
+              <option value="opcion2">segunda</option>
+              <option value="opcion3">primeras</option>
+              <option value="opcion4">segundas</option>
+            </select>
+          </div>
+          <div>
+            <label for="opcion2">Subsistema:</label>
+            <select id="opcion2" name="opcion2">
+              <option value="opcionX">Opción X</option>
+              <option value="opcionY">Opción Y</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="area">Área:</label>
+          <select id="area" name="area">
+            <option value="area1">Área 1</option>
+            <option value="area2">Área 2</option>
+          </select>
+        </div>  
+        <div>
+          <label for="opciones3">Prioridad:</label>
+          <select id="opciones3" name="opciones3">
+            <option value="opcionA">Critico</option>
+            <option value="opcionA">Alta</option>
+            <option value="opcionB">Media</option>
+            <option value="opcionC">Baja</option>
+          </select>
+        </div>
+        <br>
+        <div class="option-group">
+          <button class="btn-form btn-bordered">Cancelar</a></button>
+          <button class="btn-form btn-filled">Enviar</button>
+        </div>
+        <br>
+      </div>
+      <br>
+      <br>
+    <script>
+      // Obtener la fecha actual y mostrarla en el documento
+      const fechaActual = new Date().toLocaleDateString('es-ES');
+      document.getElementById('fechaActual').textContent = fechaActual;
+    </script>
+  </body>
+</html>

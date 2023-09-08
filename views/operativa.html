@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Mi Pantalla</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo"><a href="./principal.html"><img src="../img/logotitulo.png" height="50px" width="120%"></a></div>
+              <ul class="navbar-options">
+                  <li><a href="./formulario.html">Reportes</a></li>
+                  <li><a href="#">Graficas</a></li>
+                  <li><a href="./operativa.html">Opcion</a></li>
+                  <li><a href="../index.html"><img src="../img/user.png" style="width: 50%;"></a></li>
+              </ul>
+        </nav>
+    <div id="formulario" style="display: none;">
+        <div>
+            <div style="float: left;">
+              <label for="folio">Usuario:</label>
+              <label>PMX01234</label>
+            </div>
+            <div style="float: right;">
+              <p>Fecha: <b><span id="fechaActual"></span></b></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <br>
+        <div>
+            <label for="area">Área:</label>
+            <select id="area" name="area">
+              <option value="area1">Área 1</option>
+              <option value="area2">Área 2</option>
+              <option value="area2">Área 3</option>
+              <option value="area2">Área 4</option>
+              <option value="area2">Área 5</option>
+              <option value="area2">Área 6</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+        </div>
+
+        <div class="option-group">
+            <button class="btn-form btn-bordered" onclick="ocultar()">Cancelar</button>
+            <button class="btn-form btn-filled" onclick="ocultar()">Enviar</button>
+        </div>
+
+        
+    </div>
+
+    <script>
+        // Obtener la fecha actual y mostrarla en el documento
+        const fechaActual = new Date().toLocaleDateString('es-ES');
+        document.getElementById('fechaActual').textContent = fechaActual;
+
+        function mostrar(){
+            var formv= document.getElementById=(formulario);
+            formv.style.display="block";
+        }
+
+        function ocultar(){
+            var formi= document.getElementById=(formulario);
+            formi.style.display="none";
+        }
+    </script>
+    
+  
+  
+
+</body>
+</html>
